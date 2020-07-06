@@ -28,7 +28,7 @@ def filetest(path, names):
             if found:
                 rlst.append(names[i])
                 names[i] = None
-        names = filter(None, names)
+        names = [_f for _f in names if _f]
     return rlst
 
 def remove(itm, lst):
