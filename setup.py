@@ -1,7 +1,9 @@
 # Setup for gdmodule 0.50 and later
 
 from distutils.core import setup, Extension
-import os, glob, sys, string, commands
+from subprocess import check_output
+import os, glob, sys, string
+
 
 # version of this gdmodule package
 this_version = "0.59"
@@ -47,7 +49,7 @@ libdirs = dirtest([
 ])
 
 try:
-    exotic_libdir = commands.getoutput("gdlib-config --libdir"),
+    exotic_libdir = check_output(["gdlib-config", "--libdir"]),
     libdirs += exotic_libdir
 except:
     pass
@@ -61,7 +63,7 @@ incdirs = dirtest([
 ])
 
 try:
-    exotic_incdir = commands.getoutput("gdlib-config --includedir"),
+    exotic_incdir = check_output(["gdlib-config", "--includedir"]),
     incdirs += exotic_incdir
 except:
     pass
