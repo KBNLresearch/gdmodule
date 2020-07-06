@@ -21,7 +21,7 @@ def simple():
     im.arc((100,100),(195,175),0,360,blue)
     im.fill((100,100),red)
 
-    print im.get_bounding_rect(FONT, 12.0, 0.0, (10, 100), "Hello Python")
+    print(im.get_bounding_rect(FONT, 12.0, 0.0, (10, 100), "Hello Python"))
 
     im.string_ttf(FONT, 20.0, 0.0, (10, 100), "Hello Python", black)
 
@@ -35,13 +35,13 @@ def simple():
 
     f=cStringIO.StringIO()
     im.writePng(f)
-    print "PNG size:", len(f.getvalue())
+    print("PNG size:", len(f.getvalue()))
     f.close()
     
     f = urllib2.urlopen("http://www.gnu.org/graphics/gnu-head-sm.jpg")
     im = gd.image(f, "jpg")
     f.close()
-    print "GNU Image Size:", im.size()
+    print("GNU Image Size:", im.size())
 
 simple()
 

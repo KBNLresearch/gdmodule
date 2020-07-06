@@ -87,12 +87,12 @@ if "ttf" in missing and "freetype" not in missing:
     remove("ttf", missing)
 
 if missing:
-    print "WARNING:  Missing", string.join(missing, ", "), "Libraries"
+    print("WARNING:  Missing", string.join(missing, ", "), "Libraries")
 
 # hand-clean the libs
 
 if "gd" not in libs:
-    print "Can't find GD library."
+    print("Can't find GD library.")
     sys.exit(0)
 
 if "ttf" in libs and "freetype" in libs:
