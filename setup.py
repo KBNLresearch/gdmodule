@@ -32,7 +32,7 @@ def filetest(path, names):
     return rlst
 
 def remove(itm, lst):
-    r = range(len(lst))
+    r = list(range(len(lst)))
     r.reverse()
     for i in r:
         if lst[i] == itm:
