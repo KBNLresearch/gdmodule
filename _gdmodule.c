@@ -2083,8 +2083,7 @@ static PyObject *image_print(PyObject *self, FILE *fp, int flags)
 
 
 static PyTypeObject Imagetype = {
-    PyObject_HEAD_INIT(NULL)
-    0,                                  /*ob_size*/
+    PyObject_HEAD_INIT(NULL, 0)
     "image",                            /*tp_name*/
     sizeof(imageobject),                /*tp_basicsize*/
     0,                                  /*tp_itemsize*/
