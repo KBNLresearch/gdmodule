@@ -180,7 +180,7 @@ static fontstruct fonts[] = {
   {NULL,NULL}
 };
 
-staticforward PyTypeObject Imagetype;
+static PyTypeObject Imagetype;
 
 #define is_imageobject(v)        ((v)->ob_type == &Imagetype)
 
